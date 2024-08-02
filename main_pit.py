@@ -61,7 +61,7 @@ def train_and_validate(model, train_loader, val_loader, epochs, lr):
 def main_imagenet():
     image_size = 256
     patch_size = 32
-    num_classes = 1000
+    num_classes = 100
     dim = 256
     depth = (3, 3, 3)  # Depth for PiTMerge
     heads = 16
