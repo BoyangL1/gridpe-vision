@@ -90,7 +90,7 @@ def main_imagenet():
     )
 
     # Load data and split into training and validation sets
-    train_loader, val_loader = load_data("./imagenet100", image_size, batch_size=32)
+    train_loader, val_loader = load_data("../imagenet100", image_size, batch_size=32)
 
     # Train and validate model
     train_and_validate(v, train_loader, val_loader, epochs=10, lr=0.001)
@@ -120,7 +120,7 @@ def main_Caltech():
     )
 
     # Load data and split into training and validation sets
-    train_loader, val_loader = load_data("./caltech256", image_size, batch_size=32)
+    train_loader, val_loader = load_data("../caltech256", image_size, batch_size=32)
 
     # Train and validate model
     train_and_validate(v, train_loader, val_loader, epochs=10, lr=0.001)
