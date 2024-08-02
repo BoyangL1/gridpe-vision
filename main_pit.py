@@ -2,10 +2,10 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from torchvision import datasets, transforms
-from torch.utils.data import DataLoader
+from torch.utils.data import DataLoader, random_split
 from pit_gridPE.pit import PiT, PiTRotate, PiTComplex, PiTDeep, PiTMerge
 
-def load_data(data_dir, image_size, batch_size, num_workers=4):
+def load_data(data_dir, image_size, batch_size, val_split=0.2, num_workers=4):
     transform = transforms.Compose([
         transforms.Resize((image_size, image_size)),
         transforms.ToTensor(),
@@ -13,9 +13,16 @@ def load_data(data_dir, image_size, batch_size, num_workers=4):
     ])
     
     dataset = datasets.ImageFolder(data_dir, transform=transform)
-    loader = DataLoader(dataset, batch_size=batch_size, shuffle=True, num_workers=num_workers)
     
-    return loader
+    # Split the dataset into train and validation sets
+    val_size = int(val_split * len(dataset))
+    train_size = len(dataset) - val_size
+    train_dataset, val_dataset = random_split(dataset, [train_size, val_size])
+    
+    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, num_workers=num_workers)
+    val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False, num_workers=num_workers)
+    
+    return train_loader, val_loader
 
 def train_and_validate(model, train_loader, val_loader, epochs, lr):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -82,9 +89,8 @@ def main_imagenet():
         emb_dropout=emb_dropout
     )
 
-    # Load data
-    train_loader = load_data("./img/train", image_size, batch_size=32)
-    val_loader = load_data("./img/val", image_size, batch_size=32)
+    # Load data and split into training and validation sets
+    train_loader, val_loader = load_data("./imagenet100", image_size, batch_size=32)
 
     # Train and validate model
     train_and_validate(v, train_loader, val_loader, epochs=10, lr=0.001)
@@ -113,12 +119,11 @@ def main_Caltech():
         emb_dropout=emb_dropout
     )
 
-    # Load data
-    train_loader = load_data("./img/train", image_size, batch_size=32)
-    val_loader = load_data("./img/val", image_size, batch_size=32)
+    # Load data and split into training and validation sets
+    train_loader, val_loader = load_data("./caltech256", image_size, batch_size=32)
 
     # Train and validate model
     train_and_validate(v, train_loader, val_loader, epochs=10, lr=0.001)
 
 if __name__ == "__main__":
-    main_Caltech()
+    main_imagenet()
