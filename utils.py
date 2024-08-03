@@ -3,6 +3,8 @@ from tqdm import tqdm
 import torch
 import torch.nn as nn
 import torch.optim as optim
+from torchvision import datasets, transforms
+from torch.utils.data import DataLoader, random_split
 
 # 设置日志记录器
 def setup_logger(log_file):
@@ -90,3 +92,22 @@ def train_and_validate(model, train_loader, val_loader, epochs, lr, accuracy_thr
             logger.info(f"Best model saved with accuracy: {accuracy:.4f}")
     
     logger.info("Training and validation completed.")
+
+def load_data(data_dir, image_size, batch_size, val_split=0.2, num_workers=4):
+    transform = transforms.Compose([
+        transforms.Resize((image_size, image_size)),
+        transforms.ToTensor(),
+        transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
+    ])
+    
+    dataset = datasets.ImageFolder(data_dir, transform=transform)
+    
+    # Split the dataset into train and validation sets
+    val_size = int(val_split * len(dataset))
+    train_size = len(dataset) - val_size
+    train_dataset, val_dataset = random_split(dataset, [train_size, val_size])
+    
+    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, num_workers=num_workers)
+    val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False, num_workers=num_workers)
+    
+    return train_loader, val_loader

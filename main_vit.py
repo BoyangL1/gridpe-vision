@@ -1,87 +1,55 @@
-from torchvision import datasets, transforms
-from torch.utils.data import DataLoader, random_split
+import argparse
 from vit_gridPE.vit import ViT, ViTRotate, ViTMerge, ViTComplex, ViTDeep
 from utils import *
 
-def load_data(data_dir, image_size, batch_size, val_split=0.2, num_workers=4):
-    transform = transforms.Compose([
-        transforms.Resize((image_size, image_size)),
-        transforms.ToTensor(),
-        transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
-    ])
+def main_imagenet(args):
+    model_dict = {
+        'ViT': ViT,
+        'ViTRotate': ViTRotate,
+        'ViTMerge': ViTMerge,
+        'ViTComplex': ViTComplex,
+        'ViTDeep': ViTDeep
+    }
     
-    dataset = datasets.ImageFolder(data_dir, transform=transform)
+    ModelClass = model_dict[args.model_type]
     
-    # Split the dataset into train and validation sets
-    val_size = int(val_split * len(dataset))
-    train_size = len(dataset) - val_size
-    train_dataset, val_dataset = random_split(dataset, [train_size, val_size])
-    
-    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, num_workers=num_workers)
-    val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False, num_workers=num_workers)
-    
-    return train_loader, val_loader
-
-
-def main_imagenet():
-    image_size = 384
-    patch_size = 8
-    num_classes = 100
-    dim = 256
-    depth = 6
-    heads = 8
-    mlp_dim = 2048
-    dropout = 0.1
-    emb_dropout = 0.1
-
-    # Initialize model
-    v = ViT(
-        image_size=image_size,
-        patch_size=patch_size,
-        num_classes=num_classes,
-        dim=dim,
-        depth=depth,
-        heads=heads,
-        mlp_dim=mlp_dim,
-        dropout=dropout,
-        emb_dropout=emb_dropout
+    v = ModelClass(
+        image_size=args.image_size,
+        patch_size=args.patch_size,
+        num_classes=args.num_classes,
+        dim=args.dim,
+        depth=args.depth,
+        heads=args.heads,
+        mlp_dim=args.mlp_dim,
+        dropout=args.dropout,
+        emb_dropout=args.emb_dropout
     )
 
     # Load data and split into training and validation sets
-    train_loader, val_loader = load_data("../imagenet100-10", image_size, batch_size=32)
+    train_loader, val_loader = load_data(args.data_path, args.image_size, batch_size=args.batch_size)
 
     # Train and validate model
-    train_and_validate(v, train_loader, val_loader, epochs=300, lr=1e-4)
-
-def main_Caltech():
-    image_size = 256
-    patch_size = 32
-    num_classes = 257
-    dim = 1024
-    depth = 6
-    heads = 16
-    mlp_dim = 2048
-    dropout = 0.1
-    emb_dropout = 0.1
-
-    # Initialize model
-    v = ViTDeep(
-        image_size=image_size,
-        patch_size=patch_size,
-        num_classes=num_classes,
-        dim=dim,
-        depth=depth,
-        heads=heads,
-        mlp_dim=mlp_dim,
-        dropout=dropout,
-        emb_dropout=emb_dropout
-    )
-
-    # Load data and split into training and validation sets
-    train_loader, val_loader = load_data("../caltech256", image_size, batch_size=32)
-
-    # Train and validate model
-    train_and_validate(v, train_loader, val_loader, epochs=10000, lr=0.001)
+    train_and_validate(v, train_loader, val_loader, epochs=args.epochs, lr=args.lr)
     
 if __name__ == "__main__":
-    main_imagenet()
+    parser = argparse.ArgumentParser(description="Train a ViT model on ImageNet100")
+
+    # Add arguments without default values and mark them as required
+    parser.add_argument("--model_type", type=str, choices=['ViT', 'ViTRotate', 'ViTMerge', 'ViTComplex', 'ViTDeep'], required=True, help="Type of ViT model to use")
+    parser.add_argument("--image_size", type=int, required=True, help="Input image size")
+    parser.add_argument("--patch_size", type=int, required=True, help="Patch size")
+    parser.add_argument("--num_classes", type=int, required=True, help="Number of classes")
+    parser.add_argument("--dim", type=int, required=True, help="Dimension of the model")
+    parser.add_argument("--depth", type=int, required=True, help="Depth of the transformer")
+    parser.add_argument("--heads", type=int, required=True, help="Number of attention heads")
+    parser.add_argument("--mlp_dim", type=int, required=True, help="Dimension of the MLP layer")
+    parser.add_argument("--dropout", type=float, required=True, help="Dropout rate")
+    parser.add_argument("--emb_dropout", type=float, required=True, help="Embedding dropout rate")
+    parser.add_argument("--batch_size", type=int, required=True, help="Batch size")
+    parser.add_argument("--epochs", type=int, required=True, help="Number of training epochs")
+    parser.add_argument("--lr", type=float, required=True, help="Learning rate")
+    parser.add_argument("--data_path", type=str, required=True, help="Path to the dataset")
+
+    args = parser.parse_args()
+
+    main_imagenet(args)
