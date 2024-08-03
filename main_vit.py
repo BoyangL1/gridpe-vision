@@ -1,10 +1,8 @@
-import torch
-import torch.nn as nn
-import torch.optim as optim
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader, random_split
 from vit_gridPE.vit import ViT, ViTRotate, ViTMerge, ViTComplex, ViTDeep
-from utils import setup_logger
+from utils import *
+
 def load_data(data_dir, image_size, batch_size, val_split=0.2, num_workers=4):
     transform = transforms.Compose([
         transforms.Resize((image_size, image_size)),
@@ -24,65 +22,6 @@ def load_data(data_dir, image_size, batch_size, val_split=0.2, num_workers=4):
     
     return train_loader, val_loader
 
-def train_and_validate(model, train_loader, val_loader, epochs, lr, accuracy_threshold=0.95, log_file="./log/training.log"):
-    # 设置日志记录器
-    logger = setup_logger(log_file)
-    
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model.to(device)
-    
-    criterion = nn.CrossEntropyLoss()
-    optimizer = optim.Adam(model.parameters(), lr=lr)
-    scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='max', factor=0.1, patience=5, verbose=True)
-
-    best_accuracy = 0.0
-    
-    for epoch in range(epochs):
-        model.train()
-        running_loss = 0.0
-        
-        for images, labels in train_loader:
-            images, labels = images.to(device), labels.to(device)
-            optimizer.zero_grad()
-            
-            outputs = model(images)
-            loss = criterion(outputs, labels)
-            loss.backward()
-            optimizer.step()
-            
-            running_loss += loss.item()
-        
-        logger.info(f"Epoch {epoch+1}/{epochs}, Loss: {running_loss/len(train_loader)}")
-        
-        model.eval()
-        correct = 0
-        total = 0
-        
-        with torch.no_grad():
-            for images, labels in val_loader:
-                images, labels = images.to(device), labels.to(device)
-                outputs = model(images)
-                _, predicted = torch.max(outputs.data, 1)
-                total += labels.size(0)
-                correct += (predicted == labels).sum().item()
-        
-        accuracy = correct / total
-        logger.info(f"Validation Accuracy after Epoch {epoch+1}: {accuracy:.4f}")
-        
-        # Update learning rate
-        scheduler.step(accuracy)
-        
-        # Check if accuracy threshold is reached
-        if accuracy >= accuracy_threshold:
-            logger.info(f"Accuracy threshold reached: {accuracy:.4f}, stopping training.")
-            break
-        
-        # Save the best model
-        if accuracy > best_accuracy:
-            best_accuracy = accuracy
-            # torch.save(model.state_dict(), "best_model.pth")
-    
-    logger.info("Training and validation completed.")
 
 def main_imagenet():
     image_size = 256
@@ -96,7 +35,7 @@ def main_imagenet():
     emb_dropout = 0.1
 
     # Initialize model
-    v = ViTDeep(
+    v = ViT(
         image_size=image_size,
         patch_size=patch_size,
         num_classes=num_classes,
@@ -109,7 +48,7 @@ def main_imagenet():
     )
 
     # Load data and split into training and validation sets
-    train_loader, val_loader = load_data("../imagenet100", image_size, batch_size=32)
+    train_loader, val_loader = load_data("../imagenet100-10", image_size, batch_size=32)
 
     # Train and validate model
     train_and_validate(v, train_loader, val_loader, epochs=10000, lr=0.001)
