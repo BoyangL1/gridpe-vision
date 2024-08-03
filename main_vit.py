@@ -24,12 +24,12 @@ def load_data(data_dir, image_size, batch_size, val_split=0.2, num_workers=4):
 
 
 def main_imagenet():
-    image_size = 256
-    patch_size = 32
+    image_size = 384
+    patch_size = 8
     num_classes = 100
-    dim = 1024
+    dim = 256
     depth = 6
-    heads = 16
+    heads = 8
     mlp_dim = 2048
     dropout = 0.1
     emb_dropout = 0.1
@@ -51,7 +51,7 @@ def main_imagenet():
     train_loader, val_loader = load_data("../imagenet100-10", image_size, batch_size=32)
 
     # Train and validate model
-    train_and_validate(v, train_loader, val_loader, epochs=10000, lr=0.001)
+    train_and_validate(v, train_loader, val_loader, epochs=300, lr=1e-4)
 
 def main_Caltech():
     image_size = 256
