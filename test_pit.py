@@ -12,7 +12,7 @@ def main():
             3,
             3,
             3,
-        ),  # list of depths, indicating the number of rounds of each stage before a downsample
+        ),
         heads=16,
         mlp_dim=2048,
         dropout=0.1,

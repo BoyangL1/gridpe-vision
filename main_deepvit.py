@@ -3,7 +3,6 @@ from deepvit_gridPE.deepvit import DeepViT, DeepViTComplex, DeepViTMerge, DeepVi
 from utils import *
 
 def main_imagenet(args):
-    # 创建模型类型的字典映射
     model_dict = {
         'DeepViT': DeepViT,
         'DeepViTComplex': DeepViTComplex,
@@ -12,7 +11,6 @@ def main_imagenet(args):
         'DeepViTDeep': DeepViTDeep
     }
 
-    # 根据命令行参数选择模型
     ModelClass = model_dict[args.model_type]
 
     # Initialize model with command-line parameters

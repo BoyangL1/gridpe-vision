@@ -90,16 +90,13 @@ class GridRotateAttention(Attention):
             k_pos_list = q_pos_list
         grid_pe_for_k = GridRotatePositionalEncoding(k_pos_list, self.head_dim)
         
-        # 应用位置编码到查询和键
         q = grid_pe_for_q.apply_encoding(
             q
         )  
-        # 内部是在做位置编码和输入的矩阵乘法
         k = grid_pe_for_k.apply_encoding(
             k
         )  
 
-        # 在这里加grid编码
         attn = (q @ k.transpose(-2, -1)) * self.scale
         attn = attn.softmax(dim=-1)
         attn = self.attn_drop(attn)
@@ -121,12 +118,12 @@ class GridMergingAttention(Attention):
         else:
             pos_list = [(i, j) for i in range(H) for j in range(W)]
         
-        grid_pe = GridMergingPositionalEncoding(pos_list, C) # 计算位置编码
+        grid_pe = GridMergingPositionalEncoding(pos_list, C)
         grid_pe_tensor = torch.from_numpy(grid_pe.grid_pe).float()
-        grid_pe_tensor = grid_pe_tensor.transpose(0,1) # 转置为[seq_length, embed_dim]
-        grid_pe_expanded = grid_pe_tensor.unsqueeze(0) # 扩展为[1, seq_length, embed_dim]
+        grid_pe_tensor = grid_pe_tensor.transpose(0,1)
+        grid_pe_expanded = grid_pe_tensor.unsqueeze(0)
 
-        x += grid_pe_expanded.to(x.device) # 加到输入x上
+        x += grid_pe_expanded.to(x.device) 
 
         x = super(GridMergingAttention, self).forward(x, H, W)
         return x
@@ -151,7 +148,6 @@ class GridComplexAttention(Attention):
             kv = self.kv(x).reshape(B, -1, 2, self.num_heads, C // self.num_heads).permute(2, 0, 3, 1, 4)
         k, v = kv[0], kv[1]
 
-        # 创建位置编码, 这里head_dim是一个头的维度
         self.head_dim = C // self.num_heads
         if N != H * W:
             H += 1
@@ -170,25 +166,20 @@ class GridComplexAttention(Attention):
         grid_pe_for_k = GridComplexPositionalEncoding(k_pos_list, self.head_dim)
 
 
-        # 应用位置编码到查询和键
         q = grid_pe_for_q.apply_encoding(
             q
         )  
-        # 内部是在做位置编码和输入的矩阵乘法
         k = grid_pe_for_k.apply_encoding(
             k
         )  
 
-        # cuda不支持直接的复数相乘
         # attn = (q @ k.transpose(-2, -1)) * self.scale
         q_real = q.real
         q_imag = q.imag
         k_real = k.real.transpose(-2, -1)
         k_imag = k.imag.transpose(-2, -1)
-        # 计算实部和虚部的乘积
         real_part = q_real @ k_real - q_imag @ k_imag
         # imag_part = q_real @ k_imag + q_imag @ k_real
-        # 将实部和虚部合并为一个复数张量
         attn = real_part * self.scale
         attn = attn.softmax(dim=-1)
         attn = self.attn_drop(attn)
@@ -225,7 +216,6 @@ class GridDeepAttention(Attention):
             kv = self.kv(x).reshape(B, -1, 2, self.num_heads, C // self.num_heads).permute(2, 0, 3, 1, 4)
         k, v = kv[0], kv[1]
 
-        # 创建位置编码, 这里head_dim是一个头的维度
         self.head_dim = C // self.num_heads
         if N != H * W:
             H += 1
@@ -247,16 +237,13 @@ class GridDeepAttention(Attention):
         grid_pe_for_k = self._grid_complex_to_real(grid_pe_for_k)
 
 
-        # 应用位置编码到查询和键
         q = grid_pe_for_q.apply_encoding(
             q
         )  
-        # 内部是在做位置编码和输入的矩阵乘法
         k = grid_pe_for_k.apply_encoding(
             k
         )  
 
-        # 在这里加grid编码
         attn = (q @ k.transpose(-2, -1)) * self.scale
         attn = attn.softmax(dim=-1)
         attn = self.attn_drop(attn)
@@ -268,13 +255,9 @@ class GridDeepAttention(Attention):
         return x
     
     def _grid_complex_to_real(self, grid_pe):
-        # 建立网络
-        model = ComplexToReal(grid_pe.grid_pe.shape[1], grid_pe.grid_pe.shape[1]) # 输入和输出维度不改变
-        # 确保是一个复数张量
+        model = ComplexToReal(grid_pe.grid_pe.shape[1], grid_pe.grid_pe.shape[1])
         if not isinstance(grid_pe.grid_pe, torch.Tensor):
             grid_pe.grid_pe = torch.view_as_complex(torch.from_numpy(np.stack((grid_pe.grid_pe.real, grid_pe.grid_pe.imag), axis=-1)))
-        # 通过实虚部分离, 直接转成一个实向量.
-        # 现在已经是实数了
         grid_pe.grid_pe = model(grid_pe.grid_pe)
         
         return grid_pe
