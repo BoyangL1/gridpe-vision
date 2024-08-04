@@ -1,0 +1,393 @@
+2024-08-04 10:30:55,680 - INFO - Epoch 1/300, Loss: 4.7681
+Validation Accuracy after Epoch 1: 0.0206
+2024-08-04 10:31:19,721 - INFO - Learning rate after Epoch 1: 0.000100
+2024-08-04 10:31:44,683 - INFO - Epoch 2/300, Loss: 4.4949
+Validation Accuracy after Epoch 2: 0.0113
+2024-08-04 10:32:08,781 - INFO - Learning rate after Epoch 2: 0.000100
+2024-08-04 10:32:33,767 - INFO - Epoch 3/300, Loss: 4.4305
+Validation Accuracy after Epoch 3: 0.0149
+2024-08-04 10:32:57,961 - INFO - Learning rate after Epoch 3: 0.000100
+2024-08-04 10:33:22,870 - INFO - Epoch 4/300, Loss: 4.3574
+Validation Accuracy after Epoch 4: 0.0227
+2024-08-04 10:33:47,191 - INFO - Learning rate after Epoch 4: 0.000100
+2024-08-04 10:34:12,371 - INFO - Epoch 5/300, Loss: 4.4093
+Validation Accuracy after Epoch 5: 0.0227
+2024-08-04 10:34:36,504 - INFO - Learning rate after Epoch 5: 0.000100
+2024-08-04 10:35:01,534 - INFO - Epoch 6/300, Loss: 4.4076
+Validation Accuracy after Epoch 6: 0.0248
+2024-08-04 10:35:25,751 - INFO - Learning rate after Epoch 6: 0.000100
+2024-08-04 10:35:50,737 - INFO - Epoch 7/300, Loss: 4.3354
+Validation Accuracy after Epoch 7: 0.0276
+2024-08-04 10:36:14,904 - INFO - Learning rate after Epoch 7: 0.000100
+2024-08-04 10:36:39,998 - INFO - Epoch 8/300, Loss: 4.3058
+Validation Accuracy after Epoch 8: 0.0227
+2024-08-04 10:37:04,246 - INFO - Learning rate after Epoch 8: 0.000100
+2024-08-04 10:37:29,356 - INFO - Epoch 9/300, Loss: 4.3036
+Validation Accuracy after Epoch 9: 0.0219
+2024-08-04 10:37:53,633 - INFO - Learning rate after Epoch 9: 0.000100
+2024-08-04 10:38:18,465 - INFO - Epoch 10/300, Loss: 4.2773
+Validation Accuracy after Epoch 10: 0.0276
+2024-08-04 10:38:42,723 - INFO - Learning rate after Epoch 10: 0.000100
+2024-08-04 10:39:07,996 - INFO - Epoch 11/300, Loss: 4.2871
+Validation Accuracy after Epoch 11: 0.0298
+2024-08-04 10:39:32,261 - INFO - Learning rate after Epoch 11: 0.000100
+2024-08-04 10:39:57,403 - INFO - Epoch 12/300, Loss: 4.2488
+Validation Accuracy after Epoch 12: 0.0369
+2024-08-04 10:40:21,659 - INFO - Learning rate after Epoch 12: 0.000100
+2024-08-04 10:40:46,845 - INFO - Epoch 13/300, Loss: 4.2817
+Validation Accuracy after Epoch 13: 0.0326
+2024-08-04 10:41:11,064 - INFO - Learning rate after Epoch 13: 0.000100
+2024-08-04 10:41:36,172 - INFO - Epoch 14/300, Loss: 4.2161
+Validation Accuracy after Epoch 14: 0.0382
+2024-08-04 10:42:00,549 - INFO - Learning rate after Epoch 14: 0.000100
+2024-08-04 10:42:25,526 - INFO - Epoch 15/300, Loss: 4.1867
+Validation Accuracy after Epoch 15: 0.0355
+2024-08-04 10:42:49,588 - INFO - Learning rate after Epoch 15: 0.000100
+2024-08-04 10:43:14,779 - INFO - Epoch 16/300, Loss: 4.1754
+Validation Accuracy after Epoch 16: 0.0369
+2024-08-04 10:43:38,963 - INFO - Learning rate after Epoch 16: 0.000100
+2024-08-04 10:44:04,016 - INFO - Epoch 17/300, Loss: 4.1993
+Validation Accuracy after Epoch 17: 0.0496
+2024-08-04 10:44:28,306 - INFO - Learning rate after Epoch 17: 0.000100
+2024-08-04 10:44:53,353 - INFO - Epoch 18/300, Loss: 4.1972
+Validation Accuracy after Epoch 18: 0.0432
+2024-08-04 10:45:18,065 - INFO - Learning rate after Epoch 18: 0.000100
+2024-08-04 10:45:42,952 - INFO - Epoch 19/300, Loss: 4.1222
+Validation Accuracy after Epoch 19: 0.0546
+2024-08-04 10:46:07,188 - INFO - Learning rate after Epoch 19: 0.000100
+2024-08-04 10:46:32,259 - INFO - Epoch 20/300, Loss: 4.0913
+Validation Accuracy after Epoch 20: 0.0496
+2024-08-04 10:46:56,661 - INFO - Learning rate after Epoch 20: 0.000100
+2024-08-04 10:47:22,037 - INFO - Epoch 21/300, Loss: 4.1154
+Validation Accuracy after Epoch 21: 0.0482
+2024-08-04 10:47:46,419 - INFO - Learning rate after Epoch 21: 0.000100
+2024-08-04 10:48:11,493 - INFO - Epoch 22/300, Loss: 4.0668
+Validation Accuracy after Epoch 22: 0.0609
+2024-08-04 10:48:35,656 - INFO - Learning rate after Epoch 22: 0.000100
+2024-08-04 10:49:00,766 - INFO - Epoch 23/300, Loss: 4.0080
+Validation Accuracy after Epoch 23: 0.0630
+2024-08-04 10:49:25,010 - INFO - Learning rate after Epoch 23: 0.000100
+2024-08-04 10:49:50,132 - INFO - Epoch 24/300, Loss: 4.0293
+Validation Accuracy after Epoch 24: 0.0630
+2024-08-04 10:50:14,293 - INFO - Learning rate after Epoch 24: 0.000100
+2024-08-04 10:50:39,407 - INFO - Epoch 25/300, Loss: 3.9919
+Validation Accuracy after Epoch 25: 0.0708
+2024-08-04 10:51:03,446 - INFO - Learning rate after Epoch 25: 0.000100
+2024-08-04 10:51:28,489 - INFO - Epoch 26/300, Loss: 3.9404
+Validation Accuracy after Epoch 26: 0.0779
+2024-08-04 10:51:52,883 - INFO - Learning rate after Epoch 26: 0.000100
+2024-08-04 10:52:17,863 - INFO - Epoch 27/300, Loss: 3.8650
+Validation Accuracy after Epoch 27: 0.0786
+2024-08-04 10:52:42,164 - INFO - Learning rate after Epoch 27: 0.000100
+2024-08-04 10:53:07,224 - INFO - Epoch 28/300, Loss: 3.8341
+Validation Accuracy after Epoch 28: 0.0773
+2024-08-04 10:53:31,408 - INFO - Learning rate after Epoch 28: 0.000100
+2024-08-04 10:53:56,461 - INFO - Epoch 29/300, Loss: 3.8234
+Validation Accuracy after Epoch 29: 0.0865
+2024-08-04 10:54:20,707 - INFO - Learning rate after Epoch 29: 0.000100
+2024-08-04 10:54:45,659 - INFO - Epoch 30/300, Loss: 3.8851
+Validation Accuracy after Epoch 30: 0.0836
+2024-08-04 10:55:09,970 - INFO - Learning rate after Epoch 30: 0.000100
+2024-08-04 10:55:35,375 - INFO - Epoch 31/300, Loss: 3.8331
+Validation Accuracy after Epoch 31: 0.0985
+2024-08-04 10:55:59,541 - INFO - Learning rate after Epoch 31: 0.000100
+2024-08-04 10:56:24,594 - INFO - Epoch 32/300, Loss: 3.7968
+Validation Accuracy after Epoch 32: 0.0886
+2024-08-04 10:56:48,721 - INFO - Learning rate after Epoch 32: 0.000100
+2024-08-04 10:57:13,987 - INFO - Epoch 33/300, Loss: 3.7682
+Validation Accuracy after Epoch 33: 0.1006
+2024-08-04 10:57:38,289 - INFO - Learning rate after Epoch 33: 0.000100
+2024-08-04 10:58:03,402 - INFO - Epoch 34/300, Loss: 3.7954
+Validation Accuracy after Epoch 34: 0.1105
+2024-08-04 10:58:27,690 - INFO - Learning rate after Epoch 34: 0.000100
+2024-08-04 10:58:52,627 - INFO - Epoch 35/300, Loss: 3.6683
+Validation Accuracy after Epoch 35: 0.1141
+2024-08-04 10:59:17,091 - INFO - Learning rate after Epoch 35: 0.000100
+2024-08-04 10:59:42,008 - INFO - Epoch 36/300, Loss: 3.7043
+Validation Accuracy after Epoch 36: 0.1233
+2024-08-04 11:00:06,162 - INFO - Learning rate after Epoch 36: 0.000100
+2024-08-04 11:00:31,090 - INFO - Epoch 37/300, Loss: 3.6388
+Validation Accuracy after Epoch 37: 0.1311
+2024-08-04 11:00:55,248 - INFO - Learning rate after Epoch 37: 0.000100
+2024-08-04 11:01:20,117 - INFO - Epoch 38/300, Loss: 3.6293
+Validation Accuracy after Epoch 38: 0.1247
+2024-08-04 11:01:44,463 - INFO - Learning rate after Epoch 38: 0.000100
+2024-08-04 11:02:09,768 - INFO - Epoch 39/300, Loss: 3.5555
+Validation Accuracy after Epoch 39: 0.1325
+2024-08-04 11:02:34,199 - INFO - Learning rate after Epoch 39: 0.000100
+2024-08-04 11:02:59,513 - INFO - Epoch 40/300, Loss: 3.5418
+Validation Accuracy after Epoch 40: 0.1311
+2024-08-04 11:03:23,998 - INFO - Learning rate after Epoch 40: 0.000100
+2024-08-04 11:03:49,050 - INFO - Epoch 41/300, Loss: 3.4731
+Validation Accuracy after Epoch 41: 0.1439
+2024-08-04 11:04:13,188 - INFO - Learning rate after Epoch 41: 0.000100
+2024-08-04 11:04:38,040 - INFO - Epoch 42/300, Loss: 3.4546
+Validation Accuracy after Epoch 42: 0.1389
+2024-08-04 11:05:02,104 - INFO - Learning rate after Epoch 42: 0.000100
+2024-08-04 11:05:27,091 - INFO - Epoch 43/300, Loss: 3.3835
+Validation Accuracy after Epoch 43: 0.1594
+2024-08-04 11:05:51,442 - INFO - Learning rate after Epoch 43: 0.000100
+2024-08-04 11:06:16,761 - INFO - Epoch 44/300, Loss: 3.3750
+Validation Accuracy after Epoch 44: 0.1488
+2024-08-04 11:06:41,022 - INFO - Learning rate after Epoch 44: 0.000100
+2024-08-04 11:07:06,186 - INFO - Epoch 45/300, Loss: 3.4293
+Validation Accuracy after Epoch 45: 0.1686
+2024-08-04 11:07:30,621 - INFO - Learning rate after Epoch 45: 0.000100
+2024-08-04 11:07:55,813 - INFO - Epoch 46/300, Loss: 3.3799
+Validation Accuracy after Epoch 46: 0.1694
+2024-08-04 11:08:20,282 - INFO - Learning rate after Epoch 46: 0.000100
+2024-08-04 11:08:45,414 - INFO - Epoch 47/300, Loss: 3.3271
+Validation Accuracy after Epoch 47: 0.1658
+2024-08-04 11:09:09,704 - INFO - Learning rate after Epoch 47: 0.000100
+2024-08-04 11:09:34,758 - INFO - Epoch 48/300, Loss: 3.2811
+Validation Accuracy after Epoch 48: 0.1821
+2024-08-04 11:09:59,081 - INFO - Learning rate after Epoch 48: 0.000100
+2024-08-04 11:10:23,982 - INFO - Epoch 49/300, Loss: 3.2163
+Validation Accuracy after Epoch 49: 0.1885
+2024-08-04 11:10:48,169 - INFO - Learning rate after Epoch 49: 0.000100
+2024-08-04 11:11:13,168 - INFO - Epoch 50/300, Loss: 3.1434
+Validation Accuracy after Epoch 50: 0.1850
+2024-08-04 11:11:37,339 - INFO - Learning rate after Epoch 50: 0.000100
+2024-08-04 11:12:02,321 - INFO - Epoch 51/300, Loss: 3.1725
+Validation Accuracy after Epoch 51: 0.1949
+2024-08-04 11:12:26,652 - INFO - Learning rate after Epoch 51: 0.000100
+2024-08-04 11:12:51,643 - INFO - Epoch 52/300, Loss: 3.0438
+Validation Accuracy after Epoch 52: 0.2069
+2024-08-04 11:13:15,907 - INFO - Learning rate after Epoch 52: 0.000100
+2024-08-04 11:13:40,952 - INFO - Epoch 53/300, Loss: 3.0193
+Validation Accuracy after Epoch 53: 0.2083
+2024-08-04 11:14:05,164 - INFO - Learning rate after Epoch 53: 0.000100
+2024-08-04 11:14:30,153 - INFO - Epoch 54/300, Loss: 3.0192
+Validation Accuracy after Epoch 54: 0.2041
+2024-08-04 11:14:54,560 - INFO - Learning rate after Epoch 54: 0.000100
+2024-08-04 11:15:19,484 - INFO - Epoch 55/300, Loss: 3.0068
+Validation Accuracy after Epoch 55: 0.2182
+2024-08-04 11:15:43,715 - INFO - Learning rate after Epoch 55: 0.000100
+2024-08-04 11:16:08,731 - INFO - Epoch 56/300, Loss: 3.0366
+Validation Accuracy after Epoch 56: 0.2310
+2024-08-04 11:16:32,947 - INFO - Learning rate after Epoch 56: 0.000100
+2024-08-04 11:16:58,090 - INFO - Epoch 57/300, Loss: 2.9746
+Validation Accuracy after Epoch 57: 0.2388
+2024-08-04 11:17:22,256 - INFO - Learning rate after Epoch 57: 0.000100
+2024-08-04 11:17:47,329 - INFO - Epoch 58/300, Loss: 2.8282
+Validation Accuracy after Epoch 58: 0.2409
+2024-08-04 11:18:11,612 - INFO - Learning rate after Epoch 58: 0.000100
+2024-08-04 11:18:36,682 - INFO - Epoch 59/300, Loss: 2.8035
+Validation Accuracy after Epoch 59: 0.2487
+2024-08-04 11:19:00,911 - INFO - Learning rate after Epoch 59: 0.000100
+2024-08-04 11:19:25,945 - INFO - Epoch 60/300, Loss: 2.7961
+Validation Accuracy after Epoch 60: 0.2437
+2024-08-04 11:19:50,228 - INFO - Learning rate after Epoch 60: 0.000100
+2024-08-04 11:20:15,137 - INFO - Epoch 61/300, Loss: 2.7471
+Validation Accuracy after Epoch 61: 0.2544
+2024-08-04 11:20:39,279 - INFO - Learning rate after Epoch 61: 0.000100
+2024-08-04 11:21:04,308 - INFO - Epoch 62/300, Loss: 2.7494
+Validation Accuracy after Epoch 62: 0.2551
+2024-08-04 11:21:28,506 - INFO - Learning rate after Epoch 62: 0.000100
+2024-08-04 11:21:53,690 - INFO - Epoch 63/300, Loss: 2.6558
+Validation Accuracy after Epoch 63: 0.2934
+2024-08-04 11:22:18,004 - INFO - Learning rate after Epoch 63: 0.000100
+2024-08-04 11:22:43,085 - INFO - Epoch 64/300, Loss: 2.6036
+Validation Accuracy after Epoch 64: 0.2940
+2024-08-04 11:23:07,228 - INFO - Learning rate after Epoch 64: 0.000100
+2024-08-04 11:23:32,226 - INFO - Epoch 65/300, Loss: 2.5898
+Validation Accuracy after Epoch 65: 0.3012
+2024-08-04 11:23:56,477 - INFO - Learning rate after Epoch 65: 0.000100
+2024-08-04 11:24:21,603 - INFO - Epoch 66/300, Loss: 2.4742
+Validation Accuracy after Epoch 66: 0.3047
+2024-08-04 11:24:45,814 - INFO - Learning rate after Epoch 66: 0.000100
+2024-08-04 11:25:10,856 - INFO - Epoch 67/300, Loss: 2.6694
+Validation Accuracy after Epoch 67: 0.2877
+2024-08-04 11:25:35,075 - INFO - Learning rate after Epoch 67: 0.000100
+2024-08-04 11:26:00,375 - INFO - Epoch 68/300, Loss: 2.5773
+Validation Accuracy after Epoch 68: 0.3111
+2024-08-04 11:26:24,580 - INFO - Learning rate after Epoch 68: 0.000100
+2024-08-04 11:26:50,019 - INFO - Epoch 69/300, Loss: 2.5292
+Validation Accuracy after Epoch 69: 0.3436
+2024-08-04 11:27:14,477 - INFO - Learning rate after Epoch 69: 0.000100
+2024-08-04 11:27:39,639 - INFO - Epoch 70/300, Loss: 2.5214
+Validation Accuracy after Epoch 70: 0.3309
+2024-08-04 11:28:04,166 - INFO - Learning rate after Epoch 70: 0.000100
+2024-08-04 11:28:29,337 - INFO - Epoch 71/300, Loss: 2.4323
+Validation Accuracy after Epoch 71: 0.3146
+2024-08-04 11:28:53,691 - INFO - Learning rate after Epoch 71: 0.000100
+2024-08-04 11:29:18,795 - INFO - Epoch 72/300, Loss: 2.3645
+Validation Accuracy after Epoch 72: 0.3522
+2024-08-04 11:29:43,383 - INFO - Learning rate after Epoch 72: 0.000100
+2024-08-04 11:30:08,485 - INFO - Epoch 73/300, Loss: 2.3153
+Validation Accuracy after Epoch 73: 0.3430
+2024-08-04 11:30:32,603 - INFO - Learning rate after Epoch 73: 0.000100
+2024-08-04 11:30:57,492 - INFO - Epoch 74/300, Loss: 2.3048
+Validation Accuracy after Epoch 74: 0.3472
+2024-08-04 11:31:21,543 - INFO - Learning rate after Epoch 74: 0.000100
+2024-08-04 11:31:46,653 - INFO - Epoch 75/300, Loss: 2.2405
+Validation Accuracy after Epoch 75: 0.3444
+2024-08-04 11:32:10,979 - INFO - Learning rate after Epoch 75: 0.000100
+2024-08-04 11:32:36,026 - INFO - Epoch 76/300, Loss: 2.1561
+Validation Accuracy after Epoch 76: 0.3720
+2024-08-04 11:33:00,279 - INFO - Learning rate after Epoch 76: 0.000100
+2024-08-04 11:33:25,161 - INFO - Epoch 77/300, Loss: 2.1048
+Validation Accuracy after Epoch 77: 0.3826
+2024-08-04 11:33:49,541 - INFO - Learning rate after Epoch 77: 0.000100
+2024-08-04 11:34:14,471 - INFO - Epoch 78/300, Loss: 2.1213
+Validation Accuracy after Epoch 78: 0.4109
+2024-08-04 11:34:38,673 - INFO - Learning rate after Epoch 78: 0.000100
+2024-08-04 11:35:03,611 - INFO - Epoch 79/300, Loss: 2.1104
+Validation Accuracy after Epoch 79: 0.4259
+2024-08-04 11:35:28,393 - INFO - Learning rate after Epoch 79: 0.000100
+2024-08-04 11:35:53,383 - INFO - Epoch 80/300, Loss: 2.0191
+Validation Accuracy after Epoch 80: 0.3997
+2024-08-04 11:36:17,701 - INFO - Learning rate after Epoch 80: 0.000100
+2024-08-04 11:36:42,625 - INFO - Epoch 81/300, Loss: 1.9649
+Validation Accuracy after Epoch 81: 0.4145
+2024-08-04 11:37:07,031 - INFO - Learning rate after Epoch 81: 0.000100
+2024-08-04 11:37:32,168 - INFO - Epoch 82/300, Loss: 1.8728
+Validation Accuracy after Epoch 82: 0.4173
+2024-08-04 11:37:56,280 - INFO - Learning rate after Epoch 82: 0.000100
+2024-08-04 11:38:21,439 - INFO - Epoch 83/300, Loss: 1.8787
+Validation Accuracy after Epoch 83: 0.4266
+2024-08-04 11:38:45,958 - INFO - Learning rate after Epoch 83: 0.000100
+2024-08-04 11:39:10,930 - INFO - Epoch 84/300, Loss: 1.8746
+Validation Accuracy after Epoch 84: 0.4500
+2024-08-04 11:39:35,077 - INFO - Learning rate after Epoch 84: 0.000100
+2024-08-04 11:40:00,099 - INFO - Epoch 85/300, Loss: 1.7844
+Validation Accuracy after Epoch 85: 0.4507
+2024-08-04 11:40:24,457 - INFO - Learning rate after Epoch 85: 0.000100
+2024-08-04 11:40:49,481 - INFO - Epoch 86/300, Loss: 1.8097
+Validation Accuracy after Epoch 86: 0.4300
+2024-08-04 11:41:13,718 - INFO - Learning rate after Epoch 86: 0.000100
+2024-08-04 11:41:39,042 - INFO - Epoch 87/300, Loss: 1.9044
+Validation Accuracy after Epoch 87: 0.4520
+2024-08-04 11:42:03,187 - INFO - Learning rate after Epoch 87: 0.000100
+2024-08-04 11:42:28,054 - INFO - Epoch 88/300, Loss: 1.7464
+Validation Accuracy after Epoch 88: 0.4549
+2024-08-04 11:42:52,410 - INFO - Learning rate after Epoch 88: 0.000100
+2024-08-04 11:43:17,422 - INFO - Epoch 89/300, Loss: 1.7231
+Validation Accuracy after Epoch 89: 0.4450
+2024-08-04 11:43:41,642 - INFO - Learning rate after Epoch 89: 0.000100
+2024-08-04 11:44:06,562 - INFO - Epoch 90/300, Loss: 1.7074
+Validation Accuracy after Epoch 90: 0.4598
+2024-08-04 11:44:30,789 - INFO - Learning rate after Epoch 90: 0.000100
+2024-08-04 11:44:55,739 - INFO - Epoch 91/300, Loss: 1.6226
+Validation Accuracy after Epoch 91: 0.4889
+2024-08-04 11:45:19,960 - INFO - Learning rate after Epoch 91: 0.000100
+2024-08-04 11:45:44,908 - INFO - Epoch 92/300, Loss: 1.5232
+Validation Accuracy after Epoch 92: 0.4669
+2024-08-04 11:46:09,181 - INFO - Learning rate after Epoch 92: 0.000100
+2024-08-04 11:46:34,557 - INFO - Epoch 93/300, Loss: 1.5954
+Validation Accuracy after Epoch 93: 0.4896
+2024-08-04 11:46:58,645 - INFO - Learning rate after Epoch 93: 0.000100
+2024-08-04 11:47:23,982 - INFO - Epoch 94/300, Loss: 1.5093
+Validation Accuracy after Epoch 94: 0.5052
+2024-08-04 11:47:48,173 - INFO - Learning rate after Epoch 94: 0.000100
+2024-08-04 11:48:13,182 - INFO - Epoch 95/300, Loss: 1.4259
+Validation Accuracy after Epoch 95: 0.4960
+2024-08-04 11:48:37,409 - INFO - Learning rate after Epoch 95: 0.000100
+2024-08-04 11:49:02,457 - INFO - Epoch 96/300, Loss: 1.4635
+Validation Accuracy after Epoch 96: 0.4804
+2024-08-04 11:49:26,731 - INFO - Learning rate after Epoch 96: 0.000100
+2024-08-04 11:49:51,790 - INFO - Epoch 97/300, Loss: 1.5569
+Validation Accuracy after Epoch 97: 0.4860
+2024-08-04 11:50:16,014 - INFO - Learning rate after Epoch 97: 0.000100
+2024-08-04 11:50:41,422 - INFO - Epoch 98/300, Loss: 1.5001
+Validation Accuracy after Epoch 98: 0.5165
+2024-08-04 11:51:05,691 - INFO - Learning rate after Epoch 98: 0.000100
+2024-08-04 11:51:30,853 - INFO - Epoch 99/300, Loss: 1.3406
+Validation Accuracy after Epoch 99: 0.5286
+2024-08-04 11:51:55,042 - INFO - Learning rate after Epoch 99: 0.000100
+2024-08-04 11:52:20,225 - INFO - Epoch 100/300, Loss: 1.2864
+Validation Accuracy after Epoch 100: 0.5321
+2024-08-04 11:52:44,640 - INFO - Learning rate after Epoch 100: 0.000100
+2024-08-04 11:53:09,719 - INFO - Epoch 101/300, Loss: 1.2903
+Validation Accuracy after Epoch 101: 0.5336
+2024-08-04 11:53:33,965 - INFO - Learning rate after Epoch 101: 0.000100
+2024-08-04 11:53:59,052 - INFO - Epoch 102/300, Loss: 1.2419
+Validation Accuracy after Epoch 102: 0.5520
+2024-08-04 11:54:23,327 - INFO - Learning rate after Epoch 102: 0.000100
+2024-08-04 11:54:48,275 - INFO - Epoch 103/300, Loss: 1.2371
+Validation Accuracy after Epoch 103: 0.5336
+2024-08-04 11:55:12,494 - INFO - Learning rate after Epoch 103: 0.000100
+2024-08-04 11:55:37,390 - INFO - Epoch 104/300, Loss: 1.1764
+Validation Accuracy after Epoch 104: 0.5307
+2024-08-04 11:56:01,546 - INFO - Learning rate after Epoch 104: 0.000100
+2024-08-04 11:56:26,422 - INFO - Epoch 105/300, Loss: 1.1871
+Validation Accuracy after Epoch 105: 0.5442
+2024-08-04 11:56:50,730 - INFO - Learning rate after Epoch 105: 0.000100
+2024-08-04 11:57:15,867 - INFO - Epoch 106/300, Loss: 1.1796
+Validation Accuracy after Epoch 106: 0.5534
+2024-08-04 11:57:40,437 - INFO - Learning rate after Epoch 106: 0.000100
+2024-08-04 11:58:05,862 - INFO - Epoch 107/300, Loss: 1.1126
+Validation Accuracy after Epoch 107: 0.5393
+2024-08-04 11:58:30,316 - INFO - Learning rate after Epoch 107: 0.000100
+2024-08-04 11:58:55,432 - INFO - Epoch 108/300, Loss: 1.0765
+Validation Accuracy after Epoch 108: 0.5463
+2024-08-04 11:59:19,747 - INFO - Learning rate after Epoch 108: 0.000100
+2024-08-04 11:59:45,258 - INFO - Epoch 109/300, Loss: 1.0971
+Validation Accuracy after Epoch 109: 0.5484
+2024-08-04 12:00:09,727 - INFO - Learning rate after Epoch 109: 0.000100
+2024-08-04 12:00:34,794 - INFO - Epoch 110/300, Loss: 1.1365
+Validation Accuracy after Epoch 110: 0.5491
+2024-08-04 12:00:59,114 - INFO - Learning rate after Epoch 110: 0.000100
+2024-08-04 12:01:24,226 - INFO - Epoch 111/300, Loss: 1.0700
+Validation Accuracy after Epoch 111: 0.5669
+2024-08-04 12:01:48,371 - INFO - Learning rate after Epoch 111: 0.000100
+2024-08-04 12:02:13,516 - INFO - Epoch 112/300, Loss: 0.9538
+Validation Accuracy after Epoch 112: 0.5703
+2024-08-04 12:02:37,917 - INFO - Learning rate after Epoch 112: 0.000100
+2024-08-04 12:03:03,136 - INFO - Epoch 113/300, Loss: 0.8604
+Validation Accuracy after Epoch 113: 0.5725
+2024-08-04 12:03:27,332 - INFO - Learning rate after Epoch 113: 0.000100
+2024-08-04 12:03:52,436 - INFO - Epoch 114/300, Loss: 0.8106
+Validation Accuracy after Epoch 114: 0.5768
+2024-08-04 12:04:16,633 - INFO - Learning rate after Epoch 114: 0.000100
+2024-08-04 12:04:41,707 - INFO - Epoch 115/300, Loss: 0.8778
+Validation Accuracy after Epoch 115: 0.5831
+2024-08-04 12:05:05,963 - INFO - Learning rate after Epoch 115: 0.000100
+2024-08-04 12:05:31,097 - INFO - Epoch 116/300, Loss: 0.7790
+Validation Accuracy after Epoch 116: 0.5860
+2024-08-04 12:05:55,248 - INFO - Learning rate after Epoch 116: 0.000100
+2024-08-04 12:06:20,262 - INFO - Epoch 117/300, Loss: 0.9439
+Validation Accuracy after Epoch 117: 0.5746
+2024-08-04 12:06:44,396 - INFO - Learning rate after Epoch 117: 0.000100
+2024-08-04 12:07:09,517 - INFO - Epoch 118/300, Loss: 0.9172
+Validation Accuracy after Epoch 118: 0.5719
+2024-08-04 12:07:33,678 - INFO - Learning rate after Epoch 118: 0.000100
+2024-08-04 12:07:58,638 - INFO - Epoch 119/300, Loss: 0.8250
+Validation Accuracy after Epoch 119: 0.5931
+2024-08-04 12:08:22,826 - INFO - Learning rate after Epoch 119: 0.000100
+2024-08-04 12:08:47,966 - INFO - Epoch 120/300, Loss: 0.6704
+Validation Accuracy after Epoch 120: 0.5888
+2024-08-04 12:09:12,319 - INFO - Learning rate after Epoch 120: 0.000100
+2024-08-04 12:09:37,321 - INFO - Epoch 121/300, Loss: 0.6521
+Validation Accuracy after Epoch 121: 0.6001
+2024-08-04 12:10:01,543 - INFO - Learning rate after Epoch 121: 0.000100
+2024-08-04 12:10:26,511 - INFO - Epoch 122/300, Loss: 0.5570
+Validation Accuracy after Epoch 122: 0.6087
+2024-08-04 12:10:50,774 - INFO - Learning rate after Epoch 122: 0.000100
+2024-08-04 12:11:15,828 - INFO - Epoch 123/300, Loss: 0.5242
+Validation Accuracy after Epoch 123: 0.6136
+2024-08-04 12:11:40,109 - INFO - Learning rate after Epoch 123: 0.000100
+2024-08-04 12:12:05,258 - INFO - Epoch 124/300, Loss: 0.4932
+Validation Accuracy after Epoch 124: 0.5944
+2024-08-04 12:12:29,434 - INFO - Learning rate after Epoch 124: 0.000100
+2024-08-04 12:12:54,365 - INFO - Epoch 125/300, Loss: 0.5851
+Validation Accuracy after Epoch 125: 0.6022
+2024-08-04 12:13:18,485 - INFO - Learning rate after Epoch 125: 0.000100
+2024-08-04 12:13:43,815 - INFO - Epoch 126/300, Loss: 0.5101
+Validation Accuracy after Epoch 126: 0.6051
+2024-08-04 12:14:08,031 - INFO - Learning rate after Epoch 126: 0.000100
+2024-08-04 12:14:32,940 - INFO - Epoch 127/300, Loss: 0.4779
+Validation Accuracy after Epoch 127: 0.6143
+2024-08-04 12:14:57,044 - INFO - Learning rate after Epoch 127: 0.000100
+2024-08-04 12:15:21,972 - INFO - Epoch 128/300, Loss: 0.5183
+Validation Accuracy after Epoch 128: 0.6072
+2024-08-04 12:15:46,164 - INFO - Learning rate after Epoch 128: 0.000100
+2024-08-04 12:16:11,301 - INFO - Epoch 129/300, Loss: 0.5579
+Validation Accuracy after Epoch 129: 0.6030
+2024-08-04 12:16:35,754 - INFO - Learning rate after Epoch 129: 0.000100
+2024-08-04 12:17:00,743 - INFO - Epoch 130/300, Loss: 0.5641
+Validation Accuracy after Epoch 130: 0.6030
+2024-08-04 12:17:25,069 - INFO - Learning rate after Epoch 130: 0.000100
+2024-08-04 12:17:50,202 - INFO - Epoch 131/300, Loss: 0.4676
+Validation Accuracy after Epoch 131: 0.6150
+2024-08-04 12:18:14,480 - INFO - Learning rate after Epoch 131: 0.000100
